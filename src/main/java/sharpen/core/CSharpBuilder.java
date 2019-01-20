@@ -975,7 +975,13 @@ public class CSharpBuilder extends ASTVisitor {
 
 	private void mapThrownExceptions(List thrownExceptions, CSMember member) {
 		for (Object exception : thrownExceptions) {
-			mapThrownException((Name) exception, member);
+			try{
+				mapThrownException((Name) exception, member);
+
+			}catch ( Exception ex)
+			{
+
+			}
 		}
 	}
 
