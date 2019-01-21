@@ -197,6 +197,7 @@ public class DefaultConfiguration extends Configuration {
         //xamarin
 
         mapNamespace("android.view", "Android.Views");
+        mapType("java.lang.Runnable","Java.Lang.IRunnable");
         mapType("android.graphics.drawable.BitmapDrawable", "Android.Graphics.Drawables.BitmapDrawable");
         mapType("android.support.v4.util.LruCache", "Android.Support.V4.Util.LruCache");
         mapProperty("android.graphics.drawable.BitmapDrawable.getBitmap", "Bitmap");
