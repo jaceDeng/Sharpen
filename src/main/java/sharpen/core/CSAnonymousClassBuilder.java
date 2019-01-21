@@ -213,8 +213,11 @@ public class CSAnonymousClassBuilder extends AbstractNestedClassBuilder {
 		CSClass type = new CSClass(anonymousInnerClassName(), CSClassModifier.Sealed);
 		type.visibility(CSVisibility.Private);
 		ITypeBinding bt = anonymousBaseType();
+		//对接口增加一个基类
+		type.addBaseType(new CSTypeReference("Java.Lang.Object"));
 		CSTypeReference tref = new CSTypeReference(anonymousBaseTypeName()); 
 		type.addBaseType(tref);
+
 		for (ITypeBinding arg : bt.getTypeArguments()) {
 			tref.addTypeArgument(mappedTypeReference(arg));
 		}

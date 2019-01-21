@@ -2996,10 +2996,11 @@ public class CSharpBuilder extends ASTVisitor {
 	}
 
 	private void pushGetClassForTypeExpression(final CSTypeReferenceExpression typeName) {
-		CSMethodInvocationExpression mie = new CSMethodInvocationExpression(new CSReferenceExpression(
-		        methodName(_configuration.getRuntimeTypeName() + ".getClassForType")));
-		mie.addArgument(new CSTypeofExpression(typeName));
-		pushExpression(mie);
+		//不需要 获取类型直接typeof即可
+		//CSMethodInvocationExpression mie = new CSMethodInvocationExpression(new CSReferenceExpression(
+		//        methodName(_configuration.getRuntimeTypeName() + ".getClassForType")));
+		//mie.addArgument(new CSTypeofExpression(typeName));
+		pushExpression(new CSTypeofExpression(typeName));
 	}
 
 	public boolean visit(MethodInvocation node) {

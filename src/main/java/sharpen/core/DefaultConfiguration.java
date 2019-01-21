@@ -24,7 +24,7 @@ public class DefaultConfiguration extends Configuration {
 
     DefaultConfiguration(String runtimeTypeName) {
         super(runtimeTypeName);
-
+        setMaxColumns(9999);
         setUpPrimitiveMappings();
         setUpAnnotationMappings();
 
@@ -76,7 +76,7 @@ public class DefaultConfiguration extends Configuration {
         mapPrimitive("double");
         mapType("ubyte", "byte");
 
-        mapType("java.lang.Object", "object");
+        mapType("java.lang.Object", "Java.Lang.Object");
         mapType("java.lang.String", "string");
         mapType("java.lang.Character", "char");
         mapType("java.lang.Byte", "byte");
@@ -195,9 +195,9 @@ public class DefaultConfiguration extends Configuration {
 
         //
         //xamarin
-
+        mapType("java.lang.Object", "Java.Lang.Object");
         mapNamespace("android.view", "Android.Views");
-        mapType("java.lang.Runnable","Java.Lang.IRunnable");
+        mapType("java.lang.Runnable", "Java.Lang.IRunnable");
         mapType("android.graphics.drawable.BitmapDrawable", "Android.Graphics.Drawables.BitmapDrawable");
         mapType("android.support.v4.util.LruCache", "Android.Support.V4.Util.LruCache");
         mapProperty("android.graphics.drawable.BitmapDrawable.getBitmap", "Bitmap");

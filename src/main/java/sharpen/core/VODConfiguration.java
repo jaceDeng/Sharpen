@@ -79,7 +79,7 @@ public class VODConfiguration extends Configuration {
 		mapPrimitive("float");
 		mapPrimitive("double");
 		
-		mapType("java.lang.Object", "object");
+		//mapType("java.lang.Object", "object");
 		mapType("java.lang.String", "string");
 		/*mapType("java.lang.Character", "char");
 		mapType("java.lang.Byte", "byte");

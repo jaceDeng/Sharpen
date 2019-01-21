@@ -57,7 +57,7 @@ public class CustomConfiguration extends Configuration {
         mapPrimitive("double");
         mapType("ubyte", "byte");
 
-        mapType("java.lang.Object", "object");
+        mapType("java.lang.Object", "Java.Lang.Object");
         mapType("java.lang.String", "string");
         mapType("java.lang.Character", "char");
         mapType("java.lang.Byte", "sbyte");
